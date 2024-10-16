@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head>
+  <script src="script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pavanam&display=swap"
+    rel="stylesheet"
+  />
+  <title>TeleBook</title>
+  <link rel="icon" type="image/x-icon" href="Resources/icon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page home page-active">
+    <div class="inner-home">
+      <div class="buttons-section">
+        <button class="home-buttons" onclick="slide('dashboard')">
+          view contact
+        </button>
+        <button class="home-buttons" onclick="slide('addcontact')">
+          add contact
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page dashboard">
+    <div class="navbar">
+      <img
+        src="Resources/dashboard_home.png"
+        alt="Home"
+        class="navbar-icon"
+        onclick="slide('home')"
+      />
+      <img
+      src="Resources/dashboard_icon.png"
+      alt="dashboard"
+      class="navbar-icon"
+      onclick="slide('dashboard')"
+      />
+      <img
+      src="Resources/favorite_icon.png"
+      alt="Fav"
+      class="navbar-icon"
+      onclick="slide('favorates')"
+      />
+      <img
+      src="Resources/dashboard_add.png"
+      alt="Add"
+      class="navbar-icon"
+      onclick="slide('addcontact')"
+      />
+    </div>
+    <input type="text" class="search" placeholder="Search" />
+    <div class="innner-dashboard">
+      <h1 class="title-dashboard">Find your contacts</h1>
+      <div class="table">
+        <div class="table-container">
+          <table class="contact-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>name</th>
+                <th>contact</th>
+                <th>mail id</th>
+                <th width="80px"></th>
+                <th width="50px"></th>
+              </tr>
+            </thead>
+            <tbody id="contact-table-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page add-contact">
+    <div class="inner-add">
+      <h1 class="add-heading">New Contact</h1>
+      <form class="text-entry" id="contactForm">
+        <input
+          type="text"
+          placeholder="First Name"
+          class="form-input"
+          id="first-name"
+          required
+        />
+        <br />
+        <input
+          type="text"
+          placeholder="Last Name"
+          class="form-input"
+          id="last-name"
+          required
+        /><br />
+        <input
+          type="text"
+          placeholder="Phone"
+          class="form-input"
+          id="phone"
+          required
+        /><br />
+        <input
+          type="email"
+          placeholder="Email"
+          class="form-input"
+          id="email"
+          required
+        /><br />
+        <input type="submit" value="Save" class="add-button" />
+        <input type="reset" value="Clear" class="add-button" />
+        <img src="Resources/back_button.png" alt="Back" class="back-button" onclick="slide('dashboard')">
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="page favorates">
+    <div class="navbar">
+      <img
+        src="Resources/dashboard_home.png"
+        alt="Home"
+        class="navbar-icon"
+        onclick="slide('home')"
+      />
+      <img
+      src="Resources/dashboard_icon.png"
+      alt="dashboard"
+      class="navbar-icon"
+      onclick="slide('dashboard')"
+      />
+      <img
+      src="Resources/favorite_icon.png"
+      alt="Fav"
+      class="navbar-icon"
+      onclick="slide('favorates')"
+      />
+      <img
+      src="Resources/dashboard_add.png"
+      alt="Add"
+      class="navbar-icon"
+      onclick="slide('addcontact')"
+      />
+    </div>
+    <div class="innner-dashboard">
+      <h1 class="title-dashboard">Your Favorates</h1>
+      <div class="table">
+        <div class="table-container">
+          <table class="contact-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>name</th>
+                <th>contact</th>
+                <th>mail id</th>
+                <th width="80px"></th>
+              </tr>
+            </thead>
+            <tbody id="contact-table-body-favorates">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>
+
